@@ -1,40 +1,41 @@
 package entities;
 
-		public class Product{
-		
-			private String name;
-			private Double price;
+public class Product {
 
-			public Product(String name, Double price){
-				this.name = name;
-				this.price = price;
-			}
+    private String name;
+    private Double price;
 
-			public String getName(){
-			return name;
-			}
-		
-			public Double getPrice(){
-			return price;
-			}
+    public Product(String name, Double price) {
+        this.name = name;
+        this.price = price;
+    }
 
-			public void setName(String name){
-			this.name = name;
-			}
+    public String getName() {
+        return name;
+    }
 
-			public void setPrice(Double price){
-			this.price = price;
-			}
-			
-            public static String staticUpperCaseName(Product p){
-                return p.getName().toUpperCase();
-            }
+    public Double getPrice() {
+        return price;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public void setPrice(Double price) {
+        this.price = price;
+    }
 
+    public static String staticUpperCaseName(Product p) {
+        return p.getName().toUpperCase();
+    }
 
-			@Override
-			public String toString(){
-				return name + ", " + String.format("%.2f", price);
-			}
-		}
+    public String nonstaticUpperCaseName() {
+        return name.toUpperCase();
+    }
+
+    @Override
+    public String toString() {
+        return name + ", " + String.format("%.2f", price);
+    }
+}
